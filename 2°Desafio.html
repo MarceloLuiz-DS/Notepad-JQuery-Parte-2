@@ -1,0 +1,65 @@
+<html lang="pt-br">
+    <head>
+        <title>2° Desafio JQuery</title>
+        <meta charset="UTF-8">
+		<script src="Jquery/jquery-3.6.0.min.js"> </script>
+		<style>
+			body{
+				background-color: purple;
+				border: 4px solid #000;
+				border-radius: 5px;
+				height: 160px;
+				width: 554px;
+			}
+			div{
+				display: inline-block;
+				float: auto;
+				margin-top: 7px;
+				position: center;
+			}
+			#containerA{
+				position:absolute;
+				display: inline-block;
+			}
+		</style>
+		
+        <script>
+			alert("Basta para o cursor do Mouse em cima de uma das imagens para que o efeito seja aplicado!");
+			$(document).ready(function(){ //Função executada após carregar o documento
+				$("#imagem1").mouseenter(function(){ //Função executar quando o User clica no BT1.
+					$("#foto1").fadeTo(1000,0.3);//Executa o Efeito  em 1 segundo com 30% de opacidade.
+				}).mouseleave(function(){
+					$("#foto1").fadeTo(1000,1)//Executa o FadeTo em 1 Segundo com 100% de opacidade.
+				});
+				//Espaço.
+				$("#imagem2").mouseenter(function(){ //Função executada quando o User clica no BT2.
+					$("#foto2").fadeTo(1000,0.3);//Executa o Efeito FadeTo em 1 segundo com 30% de opacidade.
+				}).mouseleave(function(){
+					$("#foto2").fadeTo(1000,1)//Executa o FadeTo em 1 Segundo com 100% de opacidade.
+				});
+				//Espaço.
+				$("#imagem3").mouseenter(function(){ //Função executar quando o User clica no BT1.
+					$("#foto3").fadeTo(1000,0.3);//Executa o Efeito FadeTo em 1 segundo com 30% de opacidade.
+				}).mouseleave(function(){
+					$("#foto3").fadeTo(1000,1)//Executa o FadeTo em 1 Segundo com 100% de opacidade.
+				});
+				//Espaço.
+				$("#imagem4").mouseenter(function(){ //Função executar quando o User clica no BT1.
+					$("#foto4").fadeTo(1000,0.3);//Executa o Efeito FadeTo em 1 segundo com 30% de opacidade.
+				}).mouseleave(function(){
+					$("#foto4").fadeTo(1000,1)//Executa o FadeTo em 1 Segundo com 100% de opacidade.
+				});
+			});
+			
+        </script>
+		<!-- Estilização DIV caixa com css 100 pixels de altura e largura-->
+    </head>
+    <body>
+		<div id="containerA">
+		   <div id="imagem1"><img id="foto1" src="imagens/1.jpg" height="135px" width="135px"></img></div>
+		   <div id="imagem2"><img id="foto2" src="imagens/2.jpg" height="135px" width="135px"/></img></div>
+		   <div id="imagem3"><img id="foto3" src="imagens/3.jpg" height="135px" width="135px"></img></div>
+		   <div id="imagem4"><img id="foto4" src="imagens/4.jpg" height="135px" width="135px"></img></div>
+		</div>
+    </body>
+</html>
